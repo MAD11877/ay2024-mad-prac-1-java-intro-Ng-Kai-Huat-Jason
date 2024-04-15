@@ -11,6 +11,14 @@ public class Question3
      */
      
     Scanner in = new Scanner(System.in);
+
+    int myObj = in.nextInt();
+
+    in.close();
+    
+    int result = myObj * myObj;
+
+    System.out.println(result);
     
   }
 }
