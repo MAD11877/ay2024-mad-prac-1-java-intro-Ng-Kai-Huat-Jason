@@ -27,6 +27,34 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
+
+    int NoOfInts = in.nextInt();
+
+    int[] myInts = new int[NoOfInts];
+
+    for (int i = 0; i < NoOfInts; i++) {
+      myInts[i] = in.nextInt();
+    }
+
+    in.close();
+
+    int mode = 0;
+
+    for (int i = 0; i < NoOfInts; i++) {
+      int num1;
+      int num2;
+
+      num1 = myInts[i];
+      num2 = mode;
+
+      if (num1 > num2) {
+        mode = num1;
+      }
+      else{
+        mode = num2;
+      }
+    }
+
+    System.out.println(mode);
   }
 }
