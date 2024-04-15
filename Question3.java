@@ -12,11 +12,11 @@ public class Question3
      
     Scanner in = new Scanner(System.in);
 
-    int myObj = in.nextInt();
+    int myInt = in.nextInt();
 
     in.close();
     
-    int result = myObj * myObj;
+    int result = myInt * myInt;
 
     System.out.println(result);
     
