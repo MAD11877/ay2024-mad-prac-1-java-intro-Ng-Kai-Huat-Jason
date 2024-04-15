@@ -15,6 +15,6 @@ public class Question2 {
     in.close();
 
     double bmi = weight / (height * height);
-    System.out.println("Your BMI is " + String.format("%.1f", bmi));
+    System.out.println("Your BMI is " + bmi);
   }
 }
