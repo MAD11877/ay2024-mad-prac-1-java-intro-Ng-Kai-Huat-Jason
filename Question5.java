@@ -26,11 +26,22 @@ public class Question5 {
      */
     Scanner in = new Scanner(System.in);
 
+    // Prompt user for number of integers
     System.out.print("Enter the number of integers: ");
     int numIntegers = in.nextInt();
 
+    // Check for empty input (optional)
+    if (numIntegers == 0) {
+      System.out.println("No integers entered.");
+      in.close();
+      return;
+    }
+
     int currentMode = 0;
     int maxCount = 0;
+
+    // Consume the remaining newline after numIntegers (optional)
+    in.nextLine(); // This reads and discards any remaining newline character
 
     for (int i = 0; i < numIntegers; i++) {
       int currentInt = in.nextInt();
