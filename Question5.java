@@ -30,37 +30,36 @@ public class Question5 {
     System.out.print("Enter the number of integers: ");
     int numIntegers = in.nextInt();
 
-    // Check for empty input (optional)
-    if (numIntegers == 0) {
-      System.out.println("No integers entered.");
-      in.close();
-      return;
+    int[] integers = new int[numIntegers];
+
+    // Get integers from user
+    for (int i = 0; i < numIntegers; i++) {
+      System.out.print("Enter integer " + (i + 1) + ": ");
+      integers[i] = in.nextInt();
     }
 
-    int currentMode = 0;
-    int maxCount = 0;
-
-    // Consume the remaining newline after numIntegers (optional)
-    in.nextLine(); // This reads and discards any remaining newline character
+    // Find highest occuring number and print out
+    int highestCount = 0;
+    int mode = integers[0]; // Initialize mode with first element (arbitrary)
 
     for (int i = 0; i < numIntegers; i++) {
-      int currentInt = in.nextInt();
       int currentCount = 1;
-
       for (int j = i + 1; j < numIntegers; j++) {
-        if (currentInt == in.nextInt()) {
+        if (integers[i] == integers[j]) {
           currentCount++;
         }
       }
 
-      if (currentCount > maxCount) {
-        maxCount = currentCount;
-        currentMode = currentInt;
+      if (currentCount > highestCount) {
+        highestCount = currentCount;
+        mode = integers[i];
       }
     }
 
-    in.close();
+    // Print the highest occurring number
+    System.out.println("The highest occurring number is: " + mode);
 
-    System.out.println(currentMode);
+    in.close();
   }
+
 }
