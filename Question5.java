@@ -27,14 +27,12 @@ public class Question5 {
     Scanner in = new Scanner(System.in);
 
     // Prompt user for number of integers
-    System.out.print("Enter the number of integers: ");
     int numIntegers = in.nextInt();
 
     int[] integers = new int[numIntegers];
 
     // Get integers from user
     for (int i = 0; i < numIntegers; i++) {
-      System.out.print("Enter integer " + (i + 1) + ": ");
       integers[i] = in.nextInt();
     }
 
@@ -57,7 +55,7 @@ public class Question5 {
     }
 
     // Print the highest occurring number
-    System.out.println("The highest occurring number is: " + mode);
+    System.out.println(mode);
 
     in.close();
   }
