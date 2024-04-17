@@ -50,14 +50,6 @@ public class Question5 {
 
     in.close();
 
-    if (hasMultipleModes(numIntegers, maxCount)) {
-      System.out.println("The data is multimodal.");
-    } else {
-      System.out.println("The mode of the data is: " + currentMode);
-    }
-  }
-
-  private static boolean hasMultipleModes(int numIntegers, int maxCount) {
-    return maxCount > 1;
+    System.out.println(currentMode);
   }
 }
